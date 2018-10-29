@@ -56,7 +56,7 @@ endchoice
 config SEP_PRIVATE_BUILD
 	bool "Is this build an Internal and Private build"
 	depends on INTEL_SEP
-	default n
+	default y
 	help
 	  Select Yes if this is an Intel Internal Build
 
