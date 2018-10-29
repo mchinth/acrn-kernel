@@ -612,7 +612,7 @@ pax_Reserve_All (
     if ( (reservation == PAX_PMU_UNRESERVED) &&
          (pax_status.is_reserved == PAX_PMU_RESERVED) )
     {
-        rdtscll(*(&pax_status.start_time));
+	pax_status.start_time = rdtsc_ordered();
         pax_status.pid = current->pid;
 
 #if !defined (DRV_ANDROID) && !defined(DRV_CHROMEOS) && defined(CONFIG_HARDLOCKUP_DETECTOR) && LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,32)
