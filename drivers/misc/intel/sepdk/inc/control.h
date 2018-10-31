@@ -276,7 +276,7 @@ extern   U32                 *core_to_package_map;
 extern   U32                 *core_to_dev_map;
 extern   U32                 *core_to_phys_core_map;
 extern   U32                 *core_to_thread_map;
-extern   U32                  threads_per_core;
+extern   U32                 *threads_per_core;
 extern   U32                  num_packages;
 extern   U64                 *restore_bl_bypass;
 extern   U32                 **restore_ha_direct2core;
